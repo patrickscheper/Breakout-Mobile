@@ -803,7 +803,6 @@ GameObject:
   - 92: {fileID: 1203227081}
   - 124: {fileID: 1203227080}
   - 81: {fileID: 1203227079}
-  - 114: {fileID: 1203227084}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -879,17 +878,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &1203227084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1203227078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9011a31832b67458d5ccf917625178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1235576833
 Prefab:
   m_ObjectHideFlags: 0
@@ -1366,7 +1354,7 @@ MonoBehaviour:
   ballForce: 2000
   ballPrefab: {fileID: 1000012441289670, guid: 2bd3d9ae97cfc6d4dafb8a28b8101f99, type: 2}
   newBall: {fileID: 0}
-  speed: 10
+  speed: 25
 --- !u!1001 &1864129228
 Prefab:
   m_ObjectHideFlags: 0

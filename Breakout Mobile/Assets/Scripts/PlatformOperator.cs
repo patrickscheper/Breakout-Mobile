@@ -42,9 +42,8 @@ public class PlatformOperator : MonoBehaviour
     {
 #if UNITY_EDITOR
         EditorUpdate();
-#endif
 
-#if UNITY_ANDROID
+#elif UNITY_ANDROID
         AndroidUpdate();
 #endif
     }
@@ -79,7 +78,7 @@ public class PlatformOperator : MonoBehaviour
             }
         }
 
-        time = speed * Time.deltaTime;
+        float time = (speed/2) * Time.deltaTime;
         float newX = Mathf.Lerp(transform.position.x, rays.x, time);
         newX = Mathf.Clamp(newX, -20, 20);
 
@@ -119,7 +118,7 @@ public class PlatformOperator : MonoBehaviour
             }
         }
 
-        time = speed * Time.deltaTime;
+        float time = speed * Time.deltaTime;
         float newX = Mathf.Lerp(transform.position.x, rays.x, time);
         newX = Mathf.Clamp(newX, -20, 20);
 
