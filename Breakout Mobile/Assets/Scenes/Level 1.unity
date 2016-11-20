@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1203227078}
-  ballForce: 2000
+  ballForce: 1750
   ballPrefab: {fileID: 1000012441289670, guid: 2bd3d9ae97cfc6d4dafb8a28b8101f99, type: 2}
   newBall: {fileID: 0}
   speed: 25

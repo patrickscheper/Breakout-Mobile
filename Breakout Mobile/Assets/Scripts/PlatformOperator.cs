@@ -10,7 +10,7 @@ public class PlatformOperator : MonoBehaviour
 
     private Camera mainCamera_cam;
     private Collider2D _collider2D;
-    private bool Play;
+    private bool Launch;
 
     [Header("Ball Properties")]
     public float ballForce;
@@ -69,11 +69,12 @@ public class PlatformOperator : MonoBehaviour
         if (newBall)
         {
             Rigidbody2D ballBody = newBall.GetComponent<Rigidbody2D>();
-            ballBody.position = transform.position + new Vector3(0, 3);
+            ballBody.position = transform.position + new Vector3(0, 3.5f);
 
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 ballBody.AddForce(new Vector2(0, ballForce));
+                ballBody.GetComponent<BallOperator>().launched = true;
                 newBall = null;
             }
         }
@@ -108,11 +109,12 @@ public class PlatformOperator : MonoBehaviour
                         Rigidbody2D ballBody = newBall.GetComponent<Rigidbody2D>();
                         ballBody.position = transform.position + new Vector3(0, 3);
 
-                        if (Play)
+                        if (Launch)
                         {
                             ballBody.AddForce(new Vector2(0, ballForce));
+                            ballBody.GetComponent<BallOperator>().launched = true;
                             newBall = null;
-                            Play = false;
+                            Launch = false;
                         }
                     }
             }
@@ -133,7 +135,7 @@ public class PlatformOperator : MonoBehaviour
             return;
         }
 
-        Play = true;
+        Launch = true;
 
         Vector3 ballPos = transform.position + new Vector3(0, 3);
         newBall = (GameObject)Instantiate(ballPrefab, ballPos, Quaternion.identity);

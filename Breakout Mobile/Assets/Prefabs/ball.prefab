@@ -92,6 +92,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4276c0d850c37014fa48408d7977f138, type: 3}
   - {fileID: 21300000, guid: 2594b6ed323f5c548b78b96659084a6f, type: 3}
   - {fileID: 21300000, guid: f064b94bc06f3a44c8d6283a58f7fe5b, type: 3}
+  minSpeed: 65
+  maxSpeed: 70
+  minVerticalMovement: 0.1
+  launched: 0
 --- !u!212 &212000012992382978
 SpriteRenderer:
   m_ObjectHideFlags: 1
